@@ -1,0 +1,1 @@
+-For connecting the RasPi Zero with the BTT SKR Mini E3 V3 you need to switch the TX % RX connections from the Raspberry to the TFT connection at the BTT board
