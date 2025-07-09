@@ -4,7 +4,7 @@ Motherboard is a Bigtreetech SKR Mini E3V3 and a Raspberry Pi Zero 2W for Klippe
 For connecting the RasPi Zero with the BTT SKR Mini E3 V3 you need to switch the TX & RX connections from the Raspberry to the TFT connection at the BTT board. 
 Installed Klipper according to the Klipper website. 
 
-For the mechanical parts I drilled straight into the X-carriage and changed the position of the endstop. For using a Voron Stealthburner I used an adapter which was originally made for the Ender 3, what worked perfectly. 
+For the mechanical parts I drilled straight into the X-carriage and changed the position of the endstop. For using a Voron Stealthburner I used an <a href="https://www.printables.com/model/913817-linear-rail-mount-for-voron-stealthburner-on-ender?lang=de">adapter</a> which was originally made for the Ender 3, what worked perfectly. 
 STLs for the Stealthburner you can find in the Voron repository. 
 
 After Leveling it works pretty well, but there are some issues I'm currently working on.
