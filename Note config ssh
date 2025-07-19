@@ -1,0 +1,65 @@
+SSH-Client ##Must connect CB1/BBT Pi with LAN for SSH
+
+login: biqu pw:biqu
+
+sudo apt update && upgrade 
+
+cd klipper
+make menuconfig
+enable lowlevel micro-processor *
+STG32 processor
+Specify processor (SKR MINI E3 V3 GB0)
+8Kbit clockwork & Bootloader
+no GPIO pins
+save & q for close
+
+##wifi
+sudo nmtui
+search for Wifi
+enable & connect with password
+
+make
+
+sudo apt update
+
+
+
+WinSCP
+host IP adress
+user biqu pw biqu
+klipper/out/klipper.bin
+copy klipper.bin out 
+change name to firmware.bin
+copy to microSD for motherboard flash
+
+Motherboard flash with PSU connected (didn't work with USB only--power issue)
+Connect Processing Unit with motherboard via USB
+
+SSH
+lsusb
+ls dev/serial/by-id/ ##lists out the serial connection with motherboard; errors out if wrong processor in "make menuconfig"
+copy out serial connection ##printer.cfg
+
+
+Hardware issues:
+Klippy shuts down -- correct serial connection in printer.cfg
+Error temp @ first configuration -- Bed & Hotend thermistor not connected; must connect for solving
+
+
+Further configurations @ printer.cfg
+Bedsize
+Max_temp/Min_temp Bed&Hotend
+Endstop_positions
+Max_/Min_positions
+Probe_offset X/Y/Z
+Probe configuration (Microprobe.cfg; copy from CR10 Smart)
+
+Wiring [include png.]
+
+Configs after first setup
+E-Steps/Rotational_distance all motors
+Acceleration/Jerk -- Accelerometer (CAN BUS?)
+Flow
+Retraction_distance
+Extrude_/Retraction_speed
+
