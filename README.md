@@ -14,3 +14,9 @@ Solution: Connecting extra Fans at the GPIO Pins
 Upcoming changes:
 -Y-Axis linear rails
 -Camera with AI failure detection
+
+Update 1.1
+My Raspi shorted out so I switched it out with a BTT PI V1.2. Pros of it were the option for a LAN and USB conncection, which made it more like Plug&Play and makes it easier for connecting a Camera for my future upgrades.
+Only issue I had was with WiFi, which was sorted out pretty quick after connceting it with LAN and SSH, sudo nmtui, enable and connect the WiFi connection there. 
+After that it was the regular Klipper installation. Just need to change the motherboard connection in the printer.cfg. 
+You find it in SSH with "ls dev/serial/by-id/". Copy the prompted out serial connection and paste it in your printer configuration in Mainsail. 
